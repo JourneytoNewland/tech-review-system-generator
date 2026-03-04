@@ -1,0 +1,138 @@
+# 技能发布专用 .gitignore
+# 用于 tech-review-system-generator 技能公开发布
+
+# ============================================
+# 项目特定文件（不应包含在技能包中）
+# ============================================
+# 生成的评审系统（项目特定）
+index.html
+*.html
+
+# 项目特定需求文档
+REQ.md
+*.req.md
+需求文档.md
+
+# ============================================
+# 开发环境文件
+# ============================================
+# Claude Code 本地配置（可能包含敏感信息）
+.claude/settings.json
+.claude/settings.local.json
+.claude/hooks/
+
+# 本地技能使用目录（非技能源）
+.claude/skills/
+
+# ============================================
+# 操作系统文件
+# ============================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+desktop.ini
+
+# Linux
+*~
+.directory
+
+# ============================================
+# 编辑器和IDE
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+.*.sw*
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# 临时和缓存文件
+# ============================================
+*.log
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+
+# Node.js（如果有构建工具）
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python（如果有脚本）
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# ============================================
+# 测试和输出文件
+# ============================================
+# 测试输出
+test-output/
+coverage/
+*.test.html
+
+# 导出的评审报告
+exports/
+reports/
+*.json.export
+*.docx
+
+# ============================================
+# 文档草稿
+# ============================================
+DRAFT.md
+TODO.md
+WIP.md
+草稿.md
+待办.md
+
+# ============================================
+# 其他
+# ============================================
+# 压缩文件（除非是发布用的 .skill 包）
+*.zip
+*.tar
+*.tar.gz
+*.rar
+!*.skill
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 敏感信息
+*.key
+*.pem
+credentials.json
+secrets.json
